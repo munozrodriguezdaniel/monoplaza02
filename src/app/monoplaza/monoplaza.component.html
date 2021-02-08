@@ -1,0 +1,44 @@
+<h2>Listado de pilotos</h2>
+
+<!-- 
+<button (click)="add(heroNamey.value, heroSalary.value); heroNamey.value=''; heroSalary.value=''">
+  Añadir piloto
+</button>
+-->
+<table>
+	<tr>
+		<th>Nombre del piloto:</th>
+		<th><input #monoplazaPiloto2 /></th>
+	</tr>
+	<tr>
+		<th>Kilometros recorridos:</th>
+		<th><input #monoplazaKm_rec2/></th>
+	</tr>
+	<tr>
+		<th>Pitstop:</th>
+		<th><input #monoplazaPitstop2 /></th>
+	</tr>
+	<tr>
+		<th colspan="2">
+			<button (click)="add(monoplazaPiloto2.value, monoplazaKm_rec2.value, monoplazaPitstop2.value); monoplazaPiloto2.value=''; monoplazaKm_rec2.value=''; monoplazaPitstop2.value=''"> Añadir piloto </button>
+		</th>
+	</tr>
+</table>
+<br><br>
+<table>
+	<tr>
+		<th>Piloto</th>
+		<th>Kilometros recorridos</th>
+		<th>Pitstop</th>
+		<th>Nº Pitstop</th>
+		<th>Eliminar</th>
+	</tr>
+	<tr *ngFor="let monoplaza of monoplazas">
+		<th><a routerLink="/detail/{{monoplaza.id}}"> {{monoplaza.piloto}} </a></th>
+		<th> {{monoplaza.km_rec}} </th>
+		<th> {{monoplaza.pitstop}} </th>
+		<th> {{monoplaza.num_pitstop}} </th>
+		<th> <button class="delete" title="delete monoplaza"
+      (click)="delete(monoplaza)">x</button> </th>
+	</tr>
+</table>

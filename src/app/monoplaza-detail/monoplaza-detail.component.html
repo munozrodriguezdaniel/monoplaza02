@@ -1,0 +1,43 @@
+<div *ngIf="monoplaza != undefined">
+	<!--  la condición devuelve lo mismo si ponemos solo "hero"-->
+	<h2>Detalles del piloto</h2>
+	<!--
+	<div>
+		<label>Nombre del piloto:
+      <input [(ngModel)]="hero.piloto" placeholder="nombre del piloto" />
+    </label>
+		<br>
+		<label>Kilometros recorridos:
+      <input #heroSalary  [(ngModel)]="hero.km_rec" placeholder="km recorridos"/>
+    </label>
+		<br>
+		<label>Pitstop:
+      <input #heroSalary  [(ngModel)]="hero.pistop" placeholder="pitstop"/>
+    </label>
+	</div>
+	<button (click)="goBack()">Volver atras</button>
+	<button (click)="save(heroSalary.value)">Guardar cambios</button>
+</div>
+-->
+	<table>
+		<tr>
+			<th>Nombre del piloto:</th>
+			<th><input [(ngModel)]="monoplaza.piloto" placeholder="nombre del piloto" /></th>
+		</tr>
+		<tr>
+			<th>Kilometros recorridos:</th>
+			<th><input #heroSalary  [(ngModel)]="monoplaza.km_rec" placeholder="km recorridos"/></th>
+		</tr>
+		<tr>
+			<th>Pitstop:</th>
+			<th><input #heroSalary  [(ngModel)]="monoplaza.pitstop" placeholder="pitstop"/></th>
+		</tr>
+		<tr>
+			<th>Numero de pitstop:</th>
+			<th><input #heroSalary  [(ngModel)]="monoplaza.num_pitstop" placeholder="num_pitstop"/></th>
+		</tr>
+		<tr>
+			<th><button (click)="goBack()">Volver atras</button></th>
+			<th><button (click)="save(heroSalary.value)">Guardar cambios</button></th>
+		</tr>
+	</table>
